@@ -19,4 +19,8 @@
     </div>
   </div>
   <%= link_to 'Back home', restaurants_path, class:'btn btn-primary mt-3'%>
+
+  <div>
+    <%= render 'reviews/form', restaurant: @restaurant, review: @review%>
+  </div>
 </div>

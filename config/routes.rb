@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :restaurants, only: [:new, :create, :index, :show] do
-    resources :reviews, only: [:new, :create]
+    resources :reviews, only: [:create]
   end
 
 end
