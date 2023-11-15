@@ -1,0 +1,12 @@
+<div class='vh-100 d-flex flex-column justify-content-center align-items-center'>
+  <h1 >Add a New Restaurant</h1>
+  <div class='w-50'>
+    <%= simple_form_for(@restaurant) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :phone_number %>
+    <%= f.input :category %>
+    <%= f.submit %>
+  <% end %>
+  </div>
+</div>

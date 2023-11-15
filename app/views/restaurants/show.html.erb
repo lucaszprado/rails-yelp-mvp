@@ -1,0 +1,22 @@
+<div class='w-50 m-3'>
+  <div class='border'>
+    <div>
+      <h2 class='card-header'> <strong><%=@restaurant.name %></strong></h2>
+      <div class='card-body'>
+        <p><%= @restaurant.address %></p>
+      <p><%= @restaurant.category %></p>
+      <p><%= @restaurant.phone_number %></p>
+      </div>
+    </div>
+
+    <div>
+      <h3 class='card-header'>Reviews</h3>
+      <ul class='list-group'>
+        <% @restaurant.reviews.each do |review|%>
+          <li class='list-group-item'><%= review.content %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <%= link_to 'Back home', restaurants_path, class:'btn btn-primary mt-3'%>
+</div>
